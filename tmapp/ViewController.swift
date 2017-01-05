@@ -9,10 +9,10 @@
 import UIKit
 import RQShineLabel
 import Material
-
+import BubbleTransition
 import CBZSplashView
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     
     @IBOutlet weak var shineLabel: RQShineLabel!
@@ -28,8 +28,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var beBold: UILabel!
     @IBOutlet weak var wallpaper1: UIImageView!
     @IBOutlet weak var wallpaper2: UIImageView!
+    @IBOutlet weak var btnNewProfile: FlatButton!
     
     @IBOutlet weak var seeTMDev: FlatButton!
+    
+    let transition = BubbleTransition()
     
     required init?(coder aDecoder: NSCoder) {
         textArray = ["TM is\n\na bold way to show yourself. Perfectly suitable for developers/designers/coaches. Let people find your profile by providing them a QRCode.",
@@ -75,7 +78,9 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         ExecuteAfter(duration: 1){
             self.splashView.startAnimation()
-            self.shineTheLabel()
+            ExecuteAfter(duration: 1){
+                self.shineTheLabel()
+            }
         }
     }
     
@@ -110,7 +115,7 @@ class ViewController: UIViewController {
             })
         } else {
             self.shineLabel.shine(completion: {
-                ExecuteAfter(duration: 4){
+                ExecuteAfter(duration: 3){
                     self.shineTheLabel()
                 }
             })
@@ -125,6 +130,30 @@ class ViewController: UIViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination
+        controller.transitioningDelegate = self
+        controller.modalPresentationStyle = .custom
+    }
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = btnNewProfile.center
+        transition.bubbleColor = btnNewProfile.backgroundColor!
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = btnNewProfile.center
+        transition.bubbleColor = btnNewProfile.backgroundColor!
+        return transition
     }
 }
 

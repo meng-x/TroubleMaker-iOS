@@ -10,6 +10,7 @@
 		46ADF645104B3E0BD5DE47DF /* Pods_tmapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD73CC0FEE48EC6AB917A37 /* Pods_tmapp.framework */; };
 		BD4C7F691E1EC15400EA3896 /* UIBezierPath+Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C7F681E1EC15400EA3896 /* UIBezierPath+Shapes.swift */; };
 		BD4C7F6C1E1EC3B000EA3896 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C7F6B1E1EC3B000EA3896 /* Util.swift */; };
+		BD4C7F6E1E1ECEC600EA3896 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C7F6D1E1ECEC600EA3896 /* ModalViewController.swift */; };
 		BD61D36F1E1E2BBE00646F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61D36E1E1E2BBE00646F22 /* AppDelegate.swift */; };
 		BD61D3711E1E2BBE00646F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61D3701E1E2BBE00646F22 /* ViewController.swift */; };
 		BD61D3741E1E2BBE00646F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD61D3721E1E2BBE00646F22 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		990343FF2200C19B25E202F5 /* Pods-tmapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tmapp/Pods-tmapp.debug.xcconfig"; sourceTree = "<group>"; };
 		BD4C7F681E1EC15400EA3896 /* UIBezierPath+Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Shapes.swift"; sourceTree = "<group>"; };
 		BD4C7F6B1E1EC3B000EA3896 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		BD4C7F6D1E1ECEC600EA3896 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		BD61D36B1E1E2BBE00646F22 /* tmapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tmapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD61D36E1E1E2BBE00646F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD61D3701E1E2BBE00646F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				BD61D36E1E1E2BBE00646F22 /* AppDelegate.swift */,
 				BD61D3701E1E2BBE00646F22 /* ViewController.swift */,
+				BD4C7F6D1E1ECEC600EA3896 /* ModalViewController.swift */,
 				BD61D3721E1E2BBE00646F22 /* Main.storyboard */,
 				BD61D3751E1E2BBE00646F22 /* Assets.xcassets */,
 				BD61D3771E1E2BBE00646F22 /* LaunchScreen.storyboard */,
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD61D3711E1E2BBE00646F22 /* ViewController.swift in Sources */,
+				BD4C7F6E1E1ECEC600EA3896 /* ModalViewController.swift in Sources */,
 				BD4C7F691E1EC15400EA3896 /* UIBezierPath+Shapes.swift in Sources */,
 				BD61D36F1E1E2BBE00646F22 /* AppDelegate.swift in Sources */,
 				BD4C7F6C1E1EC3B000EA3896 /* Util.swift in Sources */,

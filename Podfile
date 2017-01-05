@@ -6,6 +6,7 @@ target 'tmapp' do
 pod "RQShineLabel"
 pod 'CBZSplashView', '~> 1.0.0'
 pod 'Material', '~> 2.0'
+pod 'BubbleTransition'
 
 end
 
