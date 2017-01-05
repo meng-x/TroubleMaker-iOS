@@ -179,7 +179,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="lkX-YN-8EY" kind="modal" id="7PT-ZB-IFs"/>
+                                    <segue destination="lkX-YN-8EY" kind="presentation" id="7PT-ZB-IFs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -292,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJe-47-aQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="139"/>
+            <point key="canvasLocation" x="630" y="139"/>
         </scene>
     </scenes>
     <resources>

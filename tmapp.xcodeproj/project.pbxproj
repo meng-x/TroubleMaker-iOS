@@ -238,6 +238,7 @@
 					BD61D36A1E1E2BBE00646F22 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3FHD5TF26Z;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					BD61D37E1E1E2BBE00646F22 = {
@@ -511,11 +512,13 @@
 			baseConfigurationReference = 990343FF2200C19B25E202F5 /* Pods-tmapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3FHD5TF26Z;
 				INFOPLIST_FILE = tmapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.troublemaker.tmapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -525,6 +528,7 @@
 			baseConfigurationReference = 2C6A8D823DE2E06C64D879C6 /* Pods-tmapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3FHD5TF26Z;
 				INFOPLIST_FILE = tmapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
