@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -60,6 +61,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5Z-Ks-dIF" customClass="FlatButton" customModule="Material">
+                                <rect key="frame" x="297" y="32" width="63" height="86"/>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QR Code-96" translatesAutoresizingMaskIntoConstraints="NO" id="e3f-D8-DZP">
                                 <rect key="frame" x="299" y="36" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.25286091549295775" colorSpace="calibratedWhite"/>
@@ -68,8 +72,8 @@
                                     <constraint firstAttribute="width" constant="60" id="Sji-6o-lXr"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find a TM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIq-dT-ftZ">
-                                <rect key="frame" x="297" y="97" width="63" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a TM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIq-dT-ftZ">
+                                <rect key="frame" x="300" y="97" width="59" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="50z-5P-8Kp"/>
                                 </constraints>
@@ -91,9 +95,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Be bold." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-R0-45o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be bold." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sd-R0-45o">
                                 <rect key="frame" x="16" y="143" width="343" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="bdf-WF-5WA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="41"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -146,7 +152,7 @@
                                     <constraint firstAttribute="height" constant="47" id="9BW-FX-1Xw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Creat Profile on TM">
+                                <state key="normal" title="＋ Creat Profile on TM">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -178,11 +184,15 @@
                         <constraints>
                             <constraint firstItem="A1Q-Wx-cf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Pn-RL-JQe"/>
                             <constraint firstAttribute="trailing" secondItem="A1Q-Wx-cf5" secondAttribute="trailing" constant="16" id="1oG-57-RAB"/>
+                            <constraint firstItem="0sd-R0-45o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="4lv-Pa-095"/>
                             <constraint firstItem="IFo-ki-Rhg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8j0-s7-lMa"/>
                             <constraint firstItem="4FG-zZ-BuT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Qd-2d-jpn"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4FG-zZ-BuT" secondAttribute="bottom" id="A5R-mj-O1y"/>
                             <constraint firstAttribute="trailing" secondItem="RDL-4d-NDJ" secondAttribute="trailing" constant="16" id="ABb-2g-iKf"/>
+                            <constraint firstItem="h5Z-Ks-dIF" firstAttribute="bottom" secondItem="oIq-dT-ftZ" secondAttribute="bottom" id="CIX-uC-072"/>
+                            <constraint firstItem="h5Z-Ks-dIF" firstAttribute="centerX" secondItem="e3f-D8-DZP" secondAttribute="centerX" id="CQW-rX-Z6M"/>
                             <constraint firstItem="4FG-zZ-BuT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CqS-zm-ewF"/>
+                            <constraint firstAttribute="trailing" secondItem="0sd-R0-45o" secondAttribute="trailing" constant="16" id="DbO-eg-WA3"/>
                             <constraint firstItem="RDL-4d-NDJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="17" id="Dud-cX-3x3"/>
                             <constraint firstItem="1OB-UR-s7f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Fc7-kA-2cJ"/>
                             <constraint firstItem="IFo-ki-Rhg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H1n-ei-eAV"/>
@@ -196,6 +206,8 @@
                             <constraint firstItem="O8i-jo-rJG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T4g-Fk-BbD"/>
                             <constraint firstItem="1OB-UR-s7f" firstAttribute="top" secondItem="RDL-4d-NDJ" secondAttribute="bottom" constant="22" id="VGu-NZ-2Tb"/>
                             <constraint firstItem="A1Q-Wx-cf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VeI-ku-0AB"/>
+                            <constraint firstItem="0sd-R0-45o" firstAttribute="top" secondItem="HWV-Uy-ibF" secondAttribute="bottom" constant="42" id="Vig-QZ-xmF"/>
+                            <constraint firstItem="h5Z-Ks-dIF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="WC4-Ck-hiG"/>
                             <constraint firstAttribute="trailing" secondItem="O8i-jo-rJG" secondAttribute="trailing" id="aCx-dG-zqD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O8i-jo-rJG" secondAttribute="bottom" id="bNL-eM-UGe"/>
                             <constraint firstItem="A1Q-Wx-cf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="dCZ-rp-Pa7"/>
@@ -203,6 +215,7 @@
                             <constraint firstItem="e3f-D8-DZP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="36" id="kgd-Ag-LD1"/>
                             <constraint firstItem="HWV-Uy-ibF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="nbw-f4-g0p"/>
                             <constraint firstItem="oIq-dT-ftZ" firstAttribute="top" secondItem="e3f-D8-DZP" secondAttribute="bottom" constant="1" id="ntQ-tr-ZLK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h5Z-Ks-dIF" secondAttribute="trailing" constant="-1" id="shc-h5-z6k"/>
                             <constraint firstItem="O8i-jo-rJG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sob-2j-0du"/>
                         </constraints>
                     </view>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46ADF645104B3E0BD5DE47DF /* Pods_tmapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD73CC0FEE48EC6AB917A37 /* Pods_tmapp.framework */; };
+		BD4C7F691E1EC15400EA3896 /* UIBezierPath+Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C7F681E1EC15400EA3896 /* UIBezierPath+Shapes.swift */; };
+		BD4C7F6C1E1EC3B000EA3896 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C7F6B1E1EC3B000EA3896 /* Util.swift */; };
 		BD61D36F1E1E2BBE00646F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61D36E1E1E2BBE00646F22 /* AppDelegate.swift */; };
 		BD61D3711E1E2BBE00646F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61D3701E1E2BBE00646F22 /* ViewController.swift */; };
 		BD61D3741E1E2BBE00646F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD61D3721E1E2BBE00646F22 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		2C6A8D823DE2E06C64D879C6 /* Pods-tmapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-tmapp/Pods-tmapp.release.xcconfig"; sourceTree = "<group>"; };
 		990343FF2200C19B25E202F5 /* Pods-tmapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tmapp/Pods-tmapp.debug.xcconfig"; sourceTree = "<group>"; };
+		BD4C7F681E1EC15400EA3896 /* UIBezierPath+Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Shapes.swift"; sourceTree = "<group>"; };
+		BD4C7F6B1E1EC3B000EA3896 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		BD61D36B1E1E2BBE00646F22 /* tmapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tmapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD61D36E1E1E2BBE00646F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD61D3701E1E2BBE00646F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BD4C7F6A1E1EC22000EA3896 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BD4C7F681E1EC15400EA3896 /* UIBezierPath+Shapes.swift */,
+				BD4C7F6B1E1EC3B000EA3896 /* Util.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		BD61D3621E1E2BBE00646F22 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +132,7 @@
 				BD61D3751E1E2BBE00646F22 /* Assets.xcassets */,
 				BD61D3771E1E2BBE00646F22 /* LaunchScreen.storyboard */,
 				BD61D37A1E1E2BBE00646F22 /* Info.plist */,
+				BD4C7F6A1E1EC22000EA3896 /* Util */,
 			);
 			path = tmapp;
 			sourceTree = "<group>";
@@ -338,7 +352,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD61D3711E1E2BBE00646F22 /* ViewController.swift in Sources */,
+				BD4C7F691E1EC15400EA3896 /* UIBezierPath+Shapes.swift in Sources */,
 				BD61D36F1E1E2BBE00646F22 /* AppDelegate.swift in Sources */,
+				BD4C7F6C1E1EC3B000EA3896 /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +607,7 @@
 				BD61D3951E1E2BBE00646F22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD61D3961E1E2BBE00646F22 /* Build configuration list for PBXNativeTarget "tmappTests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +616,7 @@
 				BD61D3981E1E2BBE00646F22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD61D3991E1E2BBE00646F22 /* Build configuration list for PBXNativeTarget "tmappUITests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +625,7 @@
 				BD61D39B1E1E2BBE00646F22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

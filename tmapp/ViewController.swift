@@ -10,6 +10,8 @@ import UIKit
 import RQShineLabel
 import Material
 
+import CBZSplashView
+
 class ViewController: UIViewController {
 
     
@@ -17,6 +19,8 @@ class ViewController: UIViewController {
     var textArray: [String]
     var imgArray: [String]
     var textIndex: Int
+    
+    var splashView: CBZSplashView!
     
     @IBOutlet weak var findATM: UILabel!
     @IBOutlet weak var qrBtn: UIImageView!
@@ -28,7 +32,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var seeTMDev: FlatButton!
     
     required init?(coder aDecoder: NSCoder) {
-        textArray = ["TM is a bold way to show yourself. Perfectly suitable for developers/designers/coaches. Let people find your profile by providing them a QRCode.",
+        textArray = ["TM is\n\na bold way to show yourself. Perfectly suitable for developers/designers/coaches. Let people find your profile by providing them a QRCode.",
                      "Super individual\n\nPlug and play, robust, self-managing, self-branding, self-financing, cooperate with society like a company.",
                      "“Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo.”"]
         imgArray = ["wallpaper1", "wallpaper2", "wallpaper3"]
@@ -61,11 +65,18 @@ class ViewController: UIViewController {
         shineLabel.text = textArray[textIndex]
         shineLabel.sizeToFit()
         shineLabel.center = self.view.center;
+        
+        splashView = CBZSplashView(bezierPath: UIBezierPath.TMShape(), backgroundColor: UIColor(hex32: 0xff475761))
+        splashView.animationDuration = 2
+        self.view.addSubview(splashView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        shineTheLabel()
+        ExecuteAfter(duration: 1){
+            self.splashView.startAnimation()
+            self.shineTheLabel()
+        }
     }
     
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -91,8 +102,7 @@ class ViewController: UIViewController {
                     
                 })
                 self.shineLabel.shine(completion: {
-                    let deadlineTime = DispatchTime.now() + .seconds(3)
-                    DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                    ExecuteAfter(duration: 4){
                         self.shineTheLabel()
                     }
                 })
@@ -100,8 +110,7 @@ class ViewController: UIViewController {
             })
         } else {
             self.shineLabel.shine(completion: {
-                let deadlineTime = DispatchTime.now() + .seconds(3)
-                DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+                ExecuteAfter(duration: 4){
                     self.shineTheLabel()
                 }
             })
@@ -116,6 +125,18 @@ class ViewController: UIViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
+    }
+}
+
+
+
+extension UIColor {
+    convenience init(hex32: UInt32) {
+        let alpha = CGFloat((hex32 >> 24) & 0xff) / 0xff
+        let red = CGFloat((hex32 >> 16) & 0xff) / 0xff
+        let green = CGFloat((hex32 >> 8) & 0xff) / 0xff
+        let blue = CGFloat(hex32 & 0xff) / 0xff
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
 
