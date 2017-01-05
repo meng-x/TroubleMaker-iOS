@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46ADF645104B3E0BD5DE47DF /* Pods_tmapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD73CC0FEE48EC6AB917A37 /* Pods_tmapp.framework */; };
 		BD61D36F1E1E2BBE00646F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61D36E1E1E2BBE00646F22 /* AppDelegate.swift */; };
 		BD61D3711E1E2BBE00646F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD61D3701E1E2BBE00646F22 /* ViewController.swift */; };
 		BD61D3741E1E2BBE00646F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD61D3721E1E2BBE00646F22 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C6A8D823DE2E06C64D879C6 /* Pods-tmapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-tmapp/Pods-tmapp.release.xcconfig"; sourceTree = "<group>"; };
+		990343FF2200C19B25E202F5 /* Pods-tmapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tmapp/Pods-tmapp.debug.xcconfig"; sourceTree = "<group>"; };
 		BD61D36B1E1E2BBE00646F22 /* tmapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tmapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD61D36E1E1E2BBE00646F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD61D3701E1E2BBE00646F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		BD61D38A1E1E2BBE00646F22 /* tmappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tmappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD61D38E1E1E2BBE00646F22 /* tmappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmappUITests.swift; sourceTree = "<group>"; };
 		BD61D3901E1E2BBE00646F22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBD73CC0FEE48EC6AB917A37 /* Pods_tmapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tmapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46ADF645104B3E0BD5DE47DF /* Pods_tmapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AF943E0CD81D43284CA22DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				990343FF2200C19B25E202F5 /* Pods-tmapp.debug.xcconfig */,
+				2C6A8D823DE2E06C64D879C6 /* Pods-tmapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BD61D3621E1E2BBE00646F22 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				BD61D3821E1E2BBE00646F22 /* tmappTests */,
 				BD61D38D1E1E2BBE00646F22 /* tmappUITests */,
 				BD61D36C1E1E2BBE00646F22 /* Products */,
+				2AF943E0CD81D43284CA22DC /* Pods */,
+				E1736A7EE005AB85064F3B9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = tmappUITests;
 			sourceTree = "<group>";
 		};
+		E1736A7EE005AB85064F3B9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBD73CC0FEE48EC6AB917A37 /* Pods_tmapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD61D3931E1E2BBE00646F22 /* Build configuration list for PBXNativeTarget "tmapp" */;
 			buildPhases = (
+				DEF0A866CE285A99ABD296B0 /* [CP] Check Pods Manifest.lock */,
 				BD61D3671E1E2BBE00646F22 /* Sources */,
 				BD61D3681E1E2BBE00646F22 /* Frameworks */,
 				BD61D3691E1E2BBE00646F22 /* Resources */,
+				2D4C121FB3ED9A2CF283FF49 /* [CP] Embed Pods Frameworks */,
+				73E60AC26E6925AFB0D839D0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D4C121FB3ED9A2CF283FF49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tmapp/Pods-tmapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E60AC26E6925AFB0D839D0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tmapp/Pods-tmapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF0A866CE285A99ABD296B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD61D3671E1E2BBE00646F22 /* Sources */ = {
@@ -413,6 +488,7 @@
 		};
 		BD61D3941E1E2BBE00646F22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 990343FF2200C19B25E202F5 /* Pods-tmapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3FHD5TF26Z;
@@ -426,6 +502,7 @@
 		};
 		BD61D3951E1E2BBE00646F22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C6A8D823DE2E06C64D879C6 /* Pods-tmapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3FHD5TF26Z;
