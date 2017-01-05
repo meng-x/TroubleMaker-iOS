@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tmapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper2" translatesAutoresizingMaskIntoConstraints="NO" id="4FG-zZ-BuT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper1" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-jo-rJG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1Q-Wx-cf5" customClass="RQShineLabel">
+                                <rect key="frame" x="16" y="28" width="343" height="610"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="A1Q-Wx-cf5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1Pn-RL-JQe"/>
+                            <constraint firstAttribute="trailing" secondItem="A1Q-Wx-cf5" secondAttribute="trailing" constant="16" id="1oG-57-RAB"/>
+                            <constraint firstItem="4FG-zZ-BuT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Qd-2d-jpn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4FG-zZ-BuT" secondAttribute="bottom" id="A5R-mj-O1y"/>
+                            <constraint firstItem="4FG-zZ-BuT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CqS-zm-ewF"/>
+                            <constraint firstAttribute="trailing" secondItem="4FG-zZ-BuT" secondAttribute="trailing" id="L2F-zA-3G4"/>
+                            <constraint firstItem="A1Q-Wx-cf5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="MXs-UR-rDR"/>
+                            <constraint firstItem="O8i-jo-rJG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T4g-Fk-BbD"/>
+                            <constraint firstItem="A1Q-Wx-cf5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VeI-ku-0AB"/>
+                            <constraint firstAttribute="trailing" secondItem="O8i-jo-rJG" secondAttribute="trailing" id="aCx-dG-zqD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O8i-jo-rJG" secondAttribute="bottom" id="bNL-eM-UGe"/>
+                            <constraint firstItem="A1Q-Wx-cf5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="dCZ-rp-Pa7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A1Q-Wx-cf5" secondAttribute="bottom" constant="29" id="kOQ-Xa-GGw"/>
+                            <constraint firstItem="O8i-jo-rJG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sob-2j-0du"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="shineLabel" destination="A1Q-Wx-cf5" id="Zqc-0K-OGc"/>
+                        <outlet property="wallpaper1" destination="O8i-jo-rJG" id="5jq-2f-bCz"/>
+                        <outlet property="wallpaper2" destination="4FG-zZ-BuT" id="zvd-4M-94y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wallpaper1" width="640" height="1136"/>
+        <image name="wallpaper2" width="640" height="1136"/>
+    </resources>
 </document>
